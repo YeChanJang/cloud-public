@@ -2,6 +2,11 @@
 
 This folder is a small wrapper chart that lets readers clone this repository and deploy Keycloak from the examples used in the blog series.
 
+## Related blog posts
+
+- [Keycloak Helm 설치 방법: values.yaml로 RDS, 인증서, Realm까지 설정하기](https://tistory-cloud.tistory.com/entry/Keycloak-Helm-%EC%84%A4%EC%B9%98-%EB%B0%A9%EB%B2%95-valuesyaml%EB%A1%9C-RDS-%EC%9D%B8%EC%A6%9D%EC%84%9C-Realm%EA%B9%8C%EC%A7%80-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0)
+- [Keycloak 운영 방법: 인증서 갱신, 백업, 업그레이드, 장애 대응 체크리스트](https://tistory-cloud.tistory.com/entry/Keycloak-%EC%9A%B4%EC%98%81-%EB%B0%A9%EB%B2%95-%EC%9D%B8%EC%A6%9D%EC%84%9C-%EA%B0%B1%EC%8B%A0-%EB%B0%B1%EC%97%85-%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C-%EC%9E%A5%EC%95%A0-%EB%8C%80%EC%9D%91-%EC%B2%B4%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%8A%B8)
+
 ## Upstream used by this guide
 
 - Upstream Helm chart: `bitnami/keycloak`
