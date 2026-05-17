@@ -1,6 +1,8 @@
 # Secret examples
 
-Create real Secrets outside Git and reference only their names from values files.
+Use this folder as a reminder of one rule:
+
+> **Create real Secrets outside Git. Commit only the names you reference from values files.**
 
 ## Admin password Secret
 
@@ -25,4 +27,8 @@ kubectl create secret tls {{TLS_SECRET_NAME}} \
   --key={{TLS_KEY_FILE}}
 ```
 
-Do not commit generated Secret manifests or private key files to this repository.
+## Safety notes
+
+- Do not commit generated Secret manifests.
+- Do not commit private key files.
+- Prefer a proper secret manager for production workflows.
