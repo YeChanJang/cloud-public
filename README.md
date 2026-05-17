@@ -1,31 +1,40 @@
-# cloud-public
+# yechan-cloudlab / cloud-public
 
-Public examples and reference files for the [tistory-cloud blog](https://tistory-cloud.tistory.com/).
+Practical cloud examples that accompany the [tistory-cloud blog](https://tistory-cloud.tistory.com/).
 
-This repository collects practical deployment examples that accompany blog posts.
-Each topic lives in its own folder so readers can inspect the files, clone the repository, and reproduce the guide from the same source.
+This repository is built around one idea:
+
+> **The blog explains the why. This repository gives you the files to try the how.**
+
+Each topic lives in its own folder with deployable examples, notes, and direct links back to the related article.
 
 ## Topics
 
-- `keycloak/helm-practical-guide/` - deployable wrapper chart for installing Keycloak with Helm, RDS, TLS, and realm configuration examples
-  - [Blog 1: Keycloak Helm 설치 방법](https://tistory-cloud.tistory.com/entry/Keycloak-Helm-%EC%84%A4%EC%B9%98-%EB%B0%A9%EB%B2%95-valuesyaml%EB%A1%9C-RDS-%EC%9D%B8%EC%A6%9D%EC%84%9C-Realm%EA%B9%8C%EC%A7%80-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0)
-  - [Blog 2: Keycloak 운영 방법](https://tistory-cloud.tistory.com/entry/Keycloak-%EC%9A%B4%EC%98%81-%EB%B0%A9%EB%B2%95-%EC%9D%B8%EC%A6%9D%EC%84%9C-%EA%B0%B1%EC%8B%A0-%EB%B0%B1%EC%97%85-%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C-%EC%9E%A5%EC%95%A0-%EB%8C%80%EC%9D%91-%EC%B2%B4%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%8A%B8)
-- `private-eks-helm-github-actions/` - GitHub Actions example for deploying a Helm chart to a private EKS cluster through a self-hosted runner
-  - [Blog: GitHub Actions로 Private EKS에 Helm 배포 자동화하는 방법](https://tistory-cloud.tistory.com/entry/GitHub-Actions%EB%A1%9C-Private-EKS%EC%97%90-Helm-%EB%B0%B0%ED%8F%AC-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-self-hosted-runner-%EA%B5%AC%EC%84%B1%EB%B6%80%ED%84%B0-%EB%B0%B0%ED%8F%AC%EA%B9%8C%EC%A7%80)
-- `cloudwatch-application-signals-eks/` - example files for enabling and validating Application Signals on EKS
-  - [Blog: CloudWatch Application Signals 사용법](https://tistory-cloud.tistory.com/entry/CloudWatch-Application-Signals-%EC%82%AC%EC%9A%A9%EB%B2%95-EKS-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%A7%80%EC%97%B0%EA%B3%BC-%EC%98%A4%EB%A5%98%EB%A5%BC-%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)
+| Topic | What you can learn | Blog |
+| --- | --- | --- |
+| `keycloak/helm-practical-guide/` | Deploy Keycloak with Helm, RDS, TLS, and realm configuration | [Install guide](https://tistory-cloud.tistory.com/entry/Keycloak-Helm-%EC%84%A4%EC%B9%98-%EB%B0%A9%EB%B2%95-valuesyaml%EB%A1%9C-RDS-%EC%9D%B8%EC%A6%9D%EC%84%9C-Realm%EA%B9%8C%EC%A7%80-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0) · [Operations guide](https://tistory-cloud.tistory.com/entry/Keycloak-%EC%9A%B4%EC%98%81-%EB%B0%A9%EB%B2%95-%EC%9D%B8%EC%A6%9D%EC%84%9C-%EA%B0%B1%EC%8B%A0-%EB%B0%B1%EC%97%85-%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C-%EC%9E%A5%EC%95%A0-%EB%8C%80%EC%9D%91-%EC%B2%B4%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%8A%B8) |
+| `private-eks-helm-github-actions/` | Deploy Helm charts to a private EKS cluster with a self-hosted runner | [Private EKS deployment guide](https://tistory-cloud.tistory.com/entry/GitHub-Actions%EB%A1%9C-Private-EKS%EC%97%90-Helm-%EB%B0%B0%ED%8F%AC-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-self-hosted-runner-%EA%B5%AC%EC%84%B1%EB%B6%80%ED%84%B0-%EB%B0%B0%ED%8F%AC%EA%B9%8C%EC%A7%80) |
+| `cloudwatch-application-signals-eks/` | Observe EKS application latency, errors, and dependencies with Application Signals | [Application Signals guide](https://tistory-cloud.tistory.com/entry/CloudWatch-Application-Signals-%EC%82%AC%EC%9A%A9%EB%B2%95-EKS-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%A7%80%EC%97%B0%EA%B3%BC-%EC%98%A4%EB%A5%98%EB%A5%BC-%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95) |
+
+## How to use this repository
+
+1. Pick a topic folder.
+2. Open its README first.
+3. Follow the related blog article for the full explanation.
+4. Copy the example files, replace placeholders, and adapt them to your own environment.
 
 ## Repository policy
 
-- Example files use `{{PLACEHOLDER}}` values where environment-specific data is required.
+- Environment-specific values use `{{PLACEHOLDER}}` notation.
 - Secrets, passwords, private keys, and real production endpoints are never committed.
-- Files ending with `.example.yaml` are templates for readers to copy and adapt before deployment.
-- When an upstream Helm chart is used, this repository pins the dependency and documents the chart and image versions used in the article.
+- Files ending with `.example.yaml` are templates for readers to copy and adapt.
+- When an upstream Helm chart is used, this repository pins and documents the chart and image versions used in the article.
 
 ## Linking convention
 
-Every topic folder should make the relationship with the blog explicit:
+Every topic folder should:
 
-1. Link back to the `tistory-cloud` blog from the folder README.
-2. Add direct post URLs when the related article has been published.
-3. Keep the repository examples and the article instructions aligned so readers can move between both without guessing.
+1. Link to the related `tistory-cloud` article.
+2. Explain what the folder demonstrates.
+3. Tell readers what to review before deploying.
+4. Keep the examples aligned with the article so the blog and code stay useful together.
