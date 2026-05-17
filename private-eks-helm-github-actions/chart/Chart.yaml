@@ -1,0 +1,6 @@
+apiVersion: v2
+name: my-app
+description: Minimal sample chart for Private EKS deployment automation
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
