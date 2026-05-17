@@ -1,0 +1,75 @@
+# Example only. Replace every {{PLACEHOLDER}} before deployment.
+# Keep real secrets outside Git and reference them through existingSecret fields.
+
+auth:
+  adminUser: "{{KEYCLOAK_ADMIN_USER}}"
+  existingSecret: "{{KEYCLOAK_ADMIN_SECRET_NAME}}"
+  passwordSecretKey: "admin-password"
+
+production: true
+proxy: edge
+
+postgresql:
+  enabled: false
+
+externalDatabase:
+  host: "{{RDS_HOST}}"
+  port: 5432
+  user: "{{KEYCLOAK_DB_USER}}"
+  database: "{{KEYCLOAK_DB_NAME}}"
+  existingSecret: "{{KEYCLOAK_DB_SECRET_NAME}}"
+  existingSecretPasswordKey: "db-password"
+
+extraEnvVars:
+  - name: KC_HOSTNAME
+    value: "{{KEYCLOAK_DOMAIN}}"
+  - name: KC_PROXY_HEADERS
+    value: "xforwarded"
+  - name: KC_HTTP_ENABLED
+    value: "true"
+
+replicaCount: 2
+
+resources:
+  requests:
+    cpu: "500m"
+    memory: "1Gi"
+  limits:
+    cpu: "1"
+    memory: "2Gi"
+
+livenessProbe:
+  enabled: true
+readinessProbe:
+  enabled: true
+startupProbe:
+  enabled: true
+
+ingress:
+  enabled: true
+  ingressClassName: "{{INGRESS_CLASS_NAME}}"
+  hostname: "{{KEYCLOAK_DOMAIN}}"
+  path: "/"
+  tls: true
+  extraTls:
+    - hosts:
+        - "{{KEYCLOAK_DOMAIN}}"
+      secretName: "{{TLS_SECRET_NAME}}"
+
+metrics:
+  enabled: true
+
+# Realm import example.
+# Mount your realm JSON separately and enable import only when needed.
+extraVolumes:
+  - name: realm-import
+    configMap:
+      name: "{{REALM_IMPORT_CONFIGMAP_NAME}}"
+
+extraVolumeMounts:
+  - name: realm-import
+    mountPath: /opt/bitnami/keycloak/data/import
+    readOnly: true
+
+extraStartupArgs:
+  - "--import-realm"
