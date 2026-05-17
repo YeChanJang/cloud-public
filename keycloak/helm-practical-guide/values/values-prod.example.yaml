@@ -7,7 +7,9 @@ auth:
   passwordSecretKey: "admin-password"
 
 production: true
-proxy: edge
+proxyHeaders: "xforwarded"
+hostnameStrict: true
+httpEnabled: true
 
 postgresql:
   enabled: false
@@ -17,16 +19,14 @@ externalDatabase:
   port: 5432
   user: "{{KEYCLOAK_DB_USER}}"
   database: "{{KEYCLOAK_DB_NAME}}"
+  schema: "public"
   existingSecret: "{{KEYCLOAK_DB_SECRET_NAME}}"
+  existingSecretUserKey: "db-user"
   existingSecretPasswordKey: "db-password"
+  extraParams: "sslmode=require"
 
-extraEnvVars:
-  - name: KC_HOSTNAME
-    value: "{{KEYCLOAK_DOMAIN}}"
-  - name: KC_PROXY_HEADERS
-    value: "xforwarded"
-  - name: KC_HTTP_ENABLED
-    value: "true"
+tls:
+  enabled: false
 
 replicaCount: 2
 
@@ -59,17 +59,7 @@ ingress:
 metrics:
   enabled: true
 
-# Realm import example.
-# Mount your realm JSON separately and enable import only when needed.
-extraVolumes:
-  - name: realm-import
-    configMap:
-      name: "{{REALM_IMPORT_CONFIGMAP_NAME}}"
-
-extraVolumeMounts:
-  - name: realm-import
-    mountPath: /opt/bitnami/keycloak/data/import
-    readOnly: true
-
-extraStartupArgs:
-  - "--import-realm"
+# Use a ConfigMap-based import job for declarative realm configuration.
+keycloakConfigCli:
+  enabled: true
+  existingConfigmap: "{{REALM_CONFIGMAP_NAME}}"
