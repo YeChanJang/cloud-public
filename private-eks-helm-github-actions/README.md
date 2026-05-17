@@ -29,6 +29,4 @@ This example accompanies the [tistory-cloud blog](https://tistory-cloud.tistory.
 
 ## Related blog post
 
-- [tistory-cloud blog](https://tistory-cloud.tistory.com/)
-- Related article: `GitHub Actions로 Private EKS에 Helm 배포 자동화하는 방법: self-hosted runner 구성부터 배포까지`
-- Add the direct article URL here after the post is published so readers can move from the example code to the full guide in one click.
+- [GitHub Actions로 Private EKS에 Helm 배포 자동화하는 방법: self-hosted runner 구성부터 배포까지](https://tistory-cloud.tistory.com/entry/GitHub-Actions%EB%A1%9C-Private-EKS%EC%97%90-Helm-%EB%B0%B0%ED%8F%AC-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-self-hosted-runner-%EA%B5%AC%EC%84%B1%EB%B6%80%ED%84%B0-%EB%B0%B0%ED%8F%AC%EA%B9%8C%EC%A7%80)
