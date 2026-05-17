@@ -1,0 +1,11 @@
+apiVersion: v2
+name: keycloak-practical-guide
+description: Wrapper chart for deploying Keycloak with production-oriented examples from the tistory-cloud blog
+type: application
+version: 0.1.0
+appVersion: "26.3.3"
+
+dependencies:
+  - name: keycloak
+    version: "25.3.2"
+    repository: "oci://registry-1.docker.io/bitnamicharts"
