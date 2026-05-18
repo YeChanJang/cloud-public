@@ -1,0 +1,52 @@
+# Sample override values for the companion blog article.
+# Use with ../helm-practical-guide, and replace every {{PLACEHOLDER}} before deployment.
+
+keycloak:
+  replicaCount: 2
+
+  podDisruptionBudget:
+    create: true
+    minAvailable: 1
+
+  readinessProbe:
+    enabled: true
+  livenessProbe:
+    enabled: true
+  startupProbe:
+    enabled: true
+
+  resources:
+    requests:
+      cpu: "500m"
+      memory: "1Gi"
+    limits:
+      cpu: "1"
+      memory: "2Gi"
+
+  podAntiAffinityPreset: soft
+
+  topologySpreadConstraints:
+    - maxSkew: 1
+      topologyKey: topology.kubernetes.io/zone
+      whenUnsatisfiable: ScheduleAnyway
+      labelSelector:
+        matchLabels:
+          app.kubernetes.io/name: keycloak
+
+  postgresql:
+    enabled: false
+
+  externalDatabase:
+    host: "{{RDS_HOST}}"
+    port: 5432
+    user: "{{KEYCLOAK_DB_USER}}"
+    database: "{{KEYCLOAK_DB_NAME}}"
+    schema: "public"
+    existingSecret: "{{KEYCLOAK_DB_SECRET_NAME}}"
+    existingSecretUserKey: "db-user"
+    existingSecretPasswordKey: "db-password"
+    extraParams: "sslmode=require"
+
+  extraEnvVars:
+    - name: KC_CACHE
+      value: "ispn"
