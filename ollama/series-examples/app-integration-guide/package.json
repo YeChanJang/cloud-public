@@ -1,0 +1,11 @@
+{
+  "name": "ollama-app-integration-guide",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "example": "node javascript/chat_example.js"
+  },
+  "dependencies": {
+    "ollama": "latest"
+  }
+}
