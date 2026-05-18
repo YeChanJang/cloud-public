@@ -16,6 +16,7 @@ Each topic lives in its own folder with deployable examples, notes, and direct l
 | `private-eks-helm-github-actions/` | Deploy Helm charts to a private EKS cluster with a self-hosted runner | [Private EKS deployment guide](https://tistory-cloud.tistory.com/entry/GitHub-Actions%EB%A1%9C-Private-EKS%EC%97%90-Helm-%EB%B0%B0%ED%8F%AC-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-self-hosted-runner-%EA%B5%AC%EC%84%B1%EB%B6%80%ED%84%B0-%EB%B0%B0%ED%8F%AC%EA%B9%8C%EC%A7%80) |
 | `cloudwatch-application-signals-eks/` | Observe EKS application latency, errors, and dependencies with Application Signals | [Application Signals guide](https://tistory-cloud.tistory.com/entry/CloudWatch-Application-Signals-%EC%82%AC%EC%9A%A9%EB%B2%95-EKS-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%A7%80%EC%97%B0%EA%B3%BC-%EC%98%A4%EB%A5%98%EB%A5%BC-%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95) |
 | `route53-resolver-query-log-analyzer/` | Analyze Resolver query logs with Athena and generate suspicious-domain reports | Article coming soon |
+| `s3-cost-allocation-by-department/` | Explore a sample Terraform design for bucket-level S3 cost allocation by department | Article coming soon |
 
 ## How to use this repository
 
