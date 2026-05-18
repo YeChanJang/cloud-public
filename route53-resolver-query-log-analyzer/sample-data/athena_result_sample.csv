@@ -1,0 +1,4 @@
+instance_id,query_name,query_type,rcode,query_count
+i-0123456789abcdef0,moneropool.example,A,NOERROR,12
+i-0123456789abcdef0,random-long-subdomain-9f3a2b7c4d8e.example,TXT,NOERROR,18
+i-0fedcba9876543210,does-not-exist-001.example,A,NXDOMAIN,42
