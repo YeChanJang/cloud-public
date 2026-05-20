@@ -1,0 +1,27 @@
+{
+  "title": "vLLM on ECS GPU",
+  "tags": ["vllm", "ecs", "gpu", "llmops"],
+  "timezone": "browser",
+  "schemaVersion": 39,
+  "version": 1,
+  "panels": [
+    {
+      "title": "Request Latency p95",
+      "type": "timeseries",
+      "datasource": {"type": "cloudwatch", "uid": "cloudwatch"},
+      "targets": []
+    },
+    {
+      "title": "GPU Utilization",
+      "type": "timeseries",
+      "datasource": {"type": "cloudwatch", "uid": "cloudwatch"},
+      "targets": []
+    },
+    {
+      "title": "Token Throughput",
+      "type": "timeseries",
+      "datasource": {"type": "cloudwatch", "uid": "cloudwatch"},
+      "targets": []
+    }
+  ]
+}

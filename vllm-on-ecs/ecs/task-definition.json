@@ -1,0 +1,50 @@
+{
+  "family": "vllm-openai-gpu",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["EC2"],
+  "cpu": "8192",
+  "memory": "32768",
+  "executionRoleArn": "arn:aws:iam::{{AWS_ACCOUNT_ID}}:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::{{AWS_ACCOUNT_ID}}:role/vllmTaskRole",
+  "containerDefinitions": [
+    {
+      "name": "vllm-openai",
+      "image": "{{AWS_ACCOUNT_ID}}.dkr.ecr.{{AWS_REGION}}.amazonaws.com/vllm-openai:sample",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8000,
+          "hostPort": 8000,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        {"name": "MODEL_ID", "value": "Qwen/Qwen2.5-7B-Instruct"},
+        {"name": "MAX_MODEL_LEN", "value": "4096"},
+        {"name": "GPU_MEMORY_UTILIZATION", "value": "0.90"},
+        {"name": "VLLM_API_KEY", "value": "{{CHANGE_ME_API_KEY}}"}
+      ],
+      "resourceRequirements": [
+        {"type": "GPU", "value": "1"}
+      ],
+      "linuxParameters": {
+        "sharedMemorySize": 10240
+      },
+      "healthCheck": {
+        "command": ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=3)\" || exit 1"],
+        "interval": 30,
+        "timeout": 5,
+        "retries": 5,
+        "startPeriod": 300
+      },
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/vllm-openai",
+          "awslogs-region": "{{AWS_REGION}}",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+}
