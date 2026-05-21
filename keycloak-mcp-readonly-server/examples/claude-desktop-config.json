@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "keycloak-readonly": {
+      "command": "node",
+      "args": ["C:/path/to/keycloak-mcp-readonly-server/dist/index.js"],
+      "env": {
+        "KEYCLOAK_BASE_URL": "https://keycloak.example.com",
+        "KEYCLOAK_ADMIN_REALM": "master",
+        "KEYCLOAK_TARGET_REALM": "sample",
+        "KEYCLOAK_CLIENT_ID": "mcp-readonly",
+        "KEYCLOAK_CLIENT_SECRET": "replace-me",
+        "KEYCLOAK_ALLOW_WRITE_TOOLS": "false"
+      }
+    }
+  }
+}
