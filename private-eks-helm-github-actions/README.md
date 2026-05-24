@@ -1,3 +1,5 @@
+![Private EKS Helm Deploy](./assets/github-social-preview-private-eks-helm-deploy.png)
+
 # Private EKS Helm Deployment with GitHub Actions
 
 Self-hosted GitHub Actions runner를 통해 Private Amazon EKS 클러스터에 Helm 차트를 배포하는 예제입니다.

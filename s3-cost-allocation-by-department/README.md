@@ -1,3 +1,5 @@
+![S3 Cost Allocation](./assets/github-social-preview-s3-cost-allocation.png)
+
 # S3 Cost Allocation by Department
 
 부서별 S3 비용을 명확하게 귀속하기 위한 Terraform 샘플입니다.

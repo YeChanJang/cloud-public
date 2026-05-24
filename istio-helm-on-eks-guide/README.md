@@ -1,3 +1,5 @@
+![Istio on EKS](./assets/github-social-preview-istio-on-eks.png)
+
 # istio-helm-on-eks-guide
 
 > Sample repository for installing and operating Istio on EKS with official Helm charts.

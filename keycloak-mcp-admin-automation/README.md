@@ -1,3 +1,5 @@
+![Keycloak MCP Automation](./assets/github-social-preview-keycloak-mcp-automation.png)
+
 # Keycloak MCP Admin Automation
 
 테스트 Realm에서 Keycloak 관리 작업을 AI 클라이언트로 자동화하는 MCP 서버 샘플입니다.

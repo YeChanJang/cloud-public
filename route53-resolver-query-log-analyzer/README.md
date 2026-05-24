@@ -1,3 +1,5 @@
+![Route 53 DNS Log Analyzer](./assets/github-social-preview-route53-dns-log-analyzer.png)
+
 # Route 53 Resolver Query Log Analyzer
 
 Route 53 Resolver Query Log를 Athena로 분석하고, 의심 도메인 조사용 Markdown 리포트를 생성하는 예제입니다.

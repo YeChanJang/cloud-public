@@ -1,3 +1,5 @@
+![Perplexity Sonar API Examples](./assets/github-social-preview-perplexity-sonar-api.png)
+
 # Perplexity Sonar API Examples
 
 인용 출처가 포함된 웹 기반 AI 답변을 만드는 Perplexity Sonar API 예제입니다.

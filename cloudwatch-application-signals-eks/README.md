@@ -1,3 +1,5 @@
+![CloudWatch Signals on EKS](./assets/github-social-preview-cloudwatch-signals-eks.png)
+
 # CloudWatch Application Signals on EKS
 
 EKS에서 CloudWatch Application Signals를 활성화하여 애플리케이션 지연, 오류, 의존성을 관찰하는 예제입니다.

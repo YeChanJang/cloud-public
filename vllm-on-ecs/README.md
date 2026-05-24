@@ -1,3 +1,5 @@
+![vLLM on ECS GPU](./assets/github-social-preview-vllm-on-ecs.png)
+
 # vLLM on ECS GPU
 
 vLLM을 Amazon ECS on EC2 GPU 클러스터에 배포해 OpenAI 호환 API 서버로 운영하는 예제입니다.

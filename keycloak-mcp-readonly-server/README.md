@@ -1,3 +1,5 @@
+![Keycloak MCP Readonly Server](./assets/github-social-preview-keycloak-mcp-readonly-server.png)
+
 # Keycloak MCP Readonly Server
 
 AI Agent로 Keycloak 설정을 조회하는 읽기 전용 MCP 서버 샘플입니다.

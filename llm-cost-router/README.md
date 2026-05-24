@@ -1,3 +1,5 @@
+![LLM Cost Router](./assets/github-social-preview-llm-cost-router.png)
+
 # LLM Cost Router
 
 Ollama와 Amazon Bedrock Claude를 함께 사용하는 LLM 요청 라우터 예제입니다.
