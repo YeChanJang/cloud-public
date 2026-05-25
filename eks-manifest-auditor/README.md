@@ -4,7 +4,7 @@
 
 It does not connect to AWS, EKS, kubeconfig, or a live Kubernetes cluster. The v0.1 scope is intentionally limited to local static analysis so the tool can be developed, tested, and reviewed without cloud access.
 
-Related Article: Coming soon
+Related Article: [EKS Manifest 검사 자동화: Kubernetes YAML 보안·리소스 문제를 로컬에서 찾는 Python CLI 만들기](https://tistory-cloud.tistory.com/entry/EKS-Manifest-%EA%B2%80%EC%82%AC-%EC%9E%90%EB%8F%99%ED%99%94-Kubernetes-YAML-%EB%B3%B4%EC%95%88%C2%B7%EB%A6%AC%EC%86%8C%EC%8A%A4-%EB%AC%B8%EC%A0%9C%EB%A5%BC-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EC%B0%BE%EB%8A%94-Python-CLI-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 
 ## Why This Is Needed
 
