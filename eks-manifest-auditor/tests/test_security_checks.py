@@ -11,3 +11,4 @@ def test_bad_deployment_security_findings() -> None:
     assert "SECURITY_HOST_PATH_VOLUME" in check_ids
     assert "SECURITY_ALLOW_PRIVILEGE_ESCALATION" in check_ids
     assert "SECURITY_DEFAULT_NAMESPACE" in check_ids
+    assert "SECURITY_RUN_AS_NON_ROOT_NOT_SET" in check_ids
